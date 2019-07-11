@@ -8,7 +8,7 @@ body{
     width: 100%;
     justify-content: center;
     margin: 0;
-    
+
 }
 header{
     background-color: #fff;
@@ -111,8 +111,8 @@ header .header-login a {
 .index-banner {
     width: 100%;
     height: calc(100vh - 100px);
-    background:-webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.3)),color-stop(75%,rgba(22,22,22,.7)) to(#161616)),url(../img/bg1.jpg);
-    background:linear-gradient(to top,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 75%, #161616 100%), url(../img/bg1.jpg);
+    background:-webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.2)),color-stop(75%,rgba(22,22,22,.7)) to(#161616)),url(../img/bg1.jpg);
+    background:linear-gradient(to top,rgba(22,22,22,.2) 0,rgba(22,22,22,.7) 75%, #161616 100%), url(../img/bg1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -209,50 +209,46 @@ header .header-login a {
 
 footer
 {
-	width: inherit;
-	height: 150px;
-	vertical-align: top;
+	width: 100%;
 	padding: 20px;
-	background-color:#3C4146;
-
+    background-color:#3C4146;
+    border-top: 5px solid #fff;
+    
 }
 
-.copy_right 
-{
-	display: inline-block;
-	vertical-align: top;
-	width: 50%;
-	padding-top: 0px;
 
+.copy_right 
+{   
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
 }
 
 .contact
 {
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 10px;
-	width: 50%;
+    display: flex;
+    justify-content: center;
     color: white;
+    margin-bottom: -15px;
+
 }
-.contact ul li
+footer .contact li
 {
     display: inline-block;
-    
-
 }
 
-.contact ul li a 
+.contact  li a 
 {
-    margin-left: 10px;
+    margin: 15px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 25px;
     color: #fff;
 
 }
-.contact ul li a i:hover 
+.contact li a i:hover 
 {
-	color: #0CADB7;
-	background-color: white;
+	color: dodgerblue;
 }
 .copy_right span
 {
@@ -264,12 +260,22 @@ header .logged-header-brand, .status-header-login {
 }
 header .logged-header-brand {
     width: 20%;
+    display: flex;
     border-right: 3px solid #111;
     justify-items: center;
 }
-header .statud-header-login {
+header .status-header-login {
     width: 80%;
     background-color: #111;
+}
+header .status-header-login .switch {
+    display: flex;
+    float: right;
+    margin: 10px 25px;
+}
+.user-avatar {
+    color: #fff;
+    font-size: 45px;
 }
 /*-------------- */
 /* Container */
@@ -327,6 +333,15 @@ background-color: #111;
     padding: 0;
     text-transform: uppercase;
 }
+.section-header div{
+    display: inline-block;
+} 
+.section-header-btn {
+    float: right;
+    margin-top: 25px;
+    justify-content: center;
+    
+}
 .section-header-btn button {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
@@ -339,7 +354,6 @@ background-color: #111;
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px 4px 4px 4px;
-    float: right;
     
 }
 
