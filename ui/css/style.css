@@ -4,14 +4,14 @@
 }
 
 body{
-    background-color: #111;
+    background-color: #fff;
     width: 100%;
     justify-content: center;
     margin: 0;
 
 }
 header{
-    background-color: #fff;
+    background-color: #111;
     width: 100%; 
     height: 70px;
     display: flex;
@@ -71,7 +71,7 @@ header .header-nav ul li {
 }
 header .header-nav ul li a {
     font-size: 16px;
-    color: #111;
+    color: #fff;
     text-transform: uppercase;
 
 }
@@ -111,8 +111,8 @@ header .header-login a {
 .index-banner {
     width: 100%;
     height: calc(100vh - 100px);
-    background:-webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.2)),color-stop(75%,rgba(22,22,22,.7)) to(#161616)),url(../img/bg1.jpg);
-    background:linear-gradient(to top,rgba(22,22,22,.2) 0,rgba(22,22,22,.7) 75%, #161616 100%), url(../img/bg1.jpg);
+    background:-webkit-gradient(linear,left top,left bottom,from(rgba(22,22,22,.2)),color-stop(50%,rgba(22,22,22,.7)) to(#161616)),url(../img/bg1.jpg);
+    background:linear-gradient(to top,rgba(22,22,22,.2) 0,rgba(22,22,22,.7) 100%, #161616 100%), url(../img/bg1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -262,6 +262,7 @@ header .logged-header-brand {
     width: 20%;
     display: flex;
     border-right: 3px solid #111;
+    
     justify-items: center;
 }
 header .status-header-login {
@@ -275,6 +276,10 @@ header .status-header-login .switch {
 }
 .user-avatar {
     color: #fff;
+    font-size: 45px;
+}
+.header-login .status-header-login .switch .user-avatar{
+    color: dodgerblue;
     font-size: 45px;
 }
 /*-------------- */
@@ -320,10 +325,10 @@ background-color: #111;
 }
 
 .container .section .section-container {
-    width: 95%;
-    margin: 20px;
+    width: 98%;
+    margin: 10px;
     padding: 5px 10px 5px 10px;
-    min-height: 650px;
+    min-height: 680px;
     background-color: #fff;
 }
 
@@ -338,7 +343,7 @@ background-color: #111;
 } 
 .section-header-btn {
     float: right;
-    margin-top: 25px;
+    margin: 25px 10px ;
     justify-content: center;
     
 }
@@ -357,22 +362,53 @@ background-color: #111;
     
 }
 
-/* Trip Cards */
+/* TRIP CARDS */
+.section-container .section-body{
+    margin-top: 5px;
 
-#main {
-   
-    padding: 30px 50px;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-between;
-  }
+}
+.section-container .section-body .panel{
+    padding: 0;
+}
+.section-container .section-body .panel .panel-heading{
+    background: #e4e2e2; 
+    padding:0px 15px 0px 15px;  
+    border-radius: 5px 5px 0px 0px;
+    
+}
+.panel-heading div{
+    display: inline-block;
+    padding: 0;
+}
+
+.comb-container{
+    float: right;
+    margin: 25px 10px ;
+    justify-content: center;
+}
+
+.panel-body{
+    border:1px solid #e4e2e2;
+    padding: 10px;
+    min-height: inherit;
+
+}
+.panel-body .card{
+    display: inline-block;
+    margin: 6px;
+    margin-top:20px;
+    
+}
+.panel-body .cards{
+    padding-left: 100px;
+    /* border: 1px solid red; */
+    
+}
   .card{
-    position: relative;
-    width:350px;
-    /* height: 300px; */
+
+    width:320px;
     border-radius:15px 15px 15px 15px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
     font-family: inherit;
     font-size:16px;
     margin-bottom: .8em;
@@ -406,7 +442,7 @@ background-color: #111;
     position: relative;
     display: flex;
     flex-direction: row;
-    padding: 8px;
+    padding: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   }
 
@@ -415,7 +451,7 @@ background-color: #111;
     height:80px;
     text-align: center;
     background: #fff;
-    margin-right:20px;
+    margin-right:10px;
     color: #111;
     font-size: 75px;
     padding: 5px;
@@ -437,10 +473,11 @@ background-color: #111;
     cursor: pointer;
     font-size:.9em;
     font-family: inherit;
-    width: 120px;
-    padding:12px 0;
+    width: 110px;
+    height: 30px;
+    padding:2px 0;
     margin-left:15px;
-    border-radius: 15px;
+    border-radius: 5px;
     border:0 solid transparent;
     color:white;
     /* background: #1ca3ec; */
@@ -453,4 +490,148 @@ background-color: #111;
     background: #3d8cb6;
   }
 
-  
+  /* ADD NEW TRIP */
+  .section-body .addtrip-form{
+    
+  }
+  .addtrip-form{
+    width: 70%;
+    
+  }
+  .addtrip-form .addtrip-panel-heading,.addtrip-panel-body {
+}
+  .addtrip-form .addtrip-panel-heading{
+      background: dodgerblue;
+      height: 30px;
+      color: #fff;
+      margin: 20px;
+      margin-bottom: 0px;
+      padding: 10px;
+      border-radius: 5px 5px 0px 0px;
+      font-size: 18px;
+      justify-items: center;
+
+}
+.addtrip-form .addtrip-panel-body{
+    background: #fff;
+    color: #111;
+    margin: 20px;
+    margin-top:0;
+    border:1px solid dodgerblue;
+    padding: 10px;
+    border-radius: 0px 0px 5px 5px;
+    line-height: 15px;
+    
+}
+.form-group .control-label,.col-sm-10{
+    display: inline-block;
+    justify-content: center;
+}
+.control-label{
+    font-size: 20px;
+    margin: 15px;
+}
+.form-control{
+    min-width: 260px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 2px;
+    align-items: center;
+}
+.addtrip-btn {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    border: 2px solid dodgerblue;
+    width: 100px;
+    height: 35px;
+    background: dodgerblue;
+    padding: 5px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px 4px 4px 4px;
+    margin: 20px;
+    
+}
+/* TRIP ON USER SIDE */
+
+.section-user {
+    width: 100%;
+}
+.container-2{
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    background: #fff;
+}
+.section-tittle-user h1{
+    margin-left: auto;
+    margin-right: auto;
+    color: dodgerblue;
+}
+.card-footer .booking{
+    background: rgb(32, 150, 71);
+}
+.card-footer .delbooking{
+    background: rgba(206, 19, 19, 0.897);
+}
+
+/* TRIP MODAL POPUP */
+*, *::after, *::before{
+    box-sizing:border-box;
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms  ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #fff;
+    width:500px;
+    max-width: 80%;
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #111;
+}
+.modal-header .tittle{
+        font-size: 18px;
+        font-weight: bold;
+}
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+     
+}
+.modal-body{
+    padding: 10px 15px;
+}
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms  ease-in-out;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+
+}

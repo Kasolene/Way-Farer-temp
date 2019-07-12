@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trips - WayFarer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+  
+</head>
+<body>
+    <header>
+        <div class="logged-header-brand" style="background-color:#fff;">
+            <a href="./index.html" class="brand" >WayFarer</a>
+        </div>
+        <div class="status-header-login">
+                <div class="switch">
+                         <div class="user-avatar fa fa-user" ></div>
+                         <!--<div class="dropdown">
+                            <div id="myDropdown" class="dropdown-content show">
+                                <a href="" id="user">Profile</a>
+                                <a href="" id="settings">Settings</a>
+                                <a href="" id="logout">Logout</a>
+                            </div>
+                            
+                        </div>-->
+                    </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="aside-nav">
+            <ul>
+                <li><a class="active" href="./trip.html">Trip</a></li>
+                <li><a href="./booking.html">Booking</a></li>
+                <li><a href="./">Setting</a></li>
+                <li><a href="./sign_in.html">Logout</a></li>
+            </ul> 
+        </div>
+        <div class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-tittle"><h1>Trip</h1></div>
+                    <div class="section-header-btn" id="trip"><button class="">New Trip</button></div>
+                </div>
+               
+                <div class="section-body" >
+
+                     <!-- HIDE TRIP CARDS TO DISPLAY NEW TRIP ADDING FROM -->
+
+                <form  id="newTrip" class="addtrip-form" style="display:none">
+                        <div class="addtrip-panel-heading">
+                            Add Trip
+                        </div>
+                    <div class="addtrip-panel-body">	
+						<div class="form-group">
+								<label class="control-label" >Origin</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="origin" name="origin" value=""  />
+								</div>
+						</div>
+							
+						<div class="form-group">
+								<label class="control-label" >Destination</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="destination" name="destination" value=""  />
+								</div>
+						</div>
+                        
+                        <div class="form-group">
+								<label class="control-label" >Date</label>
+								<div class="col-sm-10">
+									<input type="date" class="form-control" id="date" name="date" value=""  />
+								</div>
+						</div>
+                        
+                        <div class="form-group">
+								<label class="control-label" >Bus Licence Number</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="buslic#" name="buslic#" value=""  />
+								</div>
+                        </div>
+                        
+                        <div class="form-group">
+								<label class="control-label" >Seating Capacity</label>
+								<div class="col-sm-10">
+									<input type="number" class="form-control" id="seatplace" name="seatplace" value=""  />
+								</div>
+						</div>
+							
+						<div class="form-group">
+								<label class="control-label" >Fare</label>
+								<div class="col-sm-10">
+									<input type="number" class="form-control" id="fare" name="fare" value=""  />
+								</div>
+								
+                        </div>
+                        <button type="submit" name="save" class="addtrip-btn">Save </button>
+
+                     </div>
+				</form>
+							
+
+                <!-- END OF ADDIGN FORM-->
+                    
+                        <div class="panel"id="panel" >
+                                <div class="panel-heading">
+                                    <div class="panel-heading-tittle"><h3>Manage Trip</h3></div>
+                                        <div class="comb-container">
+                                                <label>Filter by Destination :</label>
+                                                <select name="" id="combo-type">
+                                                    <option value="">All </option>
+                                                    <option value="">Gisenyi</option>
+                                                    <option value=""> Mambasa</option>
+                                                    <option value=""> Mbarara</option>
+                                                </select>     
+                                        </div>
+                                        <div class="comb-container">
+                                            <label>Filter by Origin :</label>
+                                            <select name="" id="combo-type">
+                                                <option value="">All</option>
+                                                <option value="">Kigali</option>
+                                                <option value="">Kampala</option>
+                                                <option value=""> Nairobi</option>
+                                            </select>
+                                        </div>
+                                        
+                                </div>
+                                    
+                                <div class="panel-body" >
+                                    <!--Card 2-->
+                                    <div class="card">
+                                                <div class="card-header">
+                                                  <div class="trip-id">
+                                                        <span>ID :</span>
+                                                        <span class="status-content">TR025-KG</span>
+                                                  </div>
+                                                  <div class="status">
+                                                      <span>Status :</span>
+                                                      <span class="status-content">Active</span>
+                                                  </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="trip">
+                                                        <div class="trip-avatar fa fa-bus"></div>
+                                                    </div>
+                                                  <div class="infos">
+                                                        <div>
+                                                            <span class="prop" >Origin : </span><span class="value" >Kigali</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="prop">Destination : </span> <span class="value" >Kampala</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                        </div>
+                                                        <div>
+                                                            <span class="prop"> Fare : </span><span class="value" >10 000</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                        </div>
+                                                  </div>
+                                                </div>
+                                                
+                                                
+                                                <div class="card-footer">
+                                                  <button data-modal-target="#modal" class="details">View Details</button>
+                                                  <button class="cancel">Cancel</button>
+                                              
+                                                </div>
+                                            </div>
+                                            <!--Card 2-->
+                                            <div class="card">
+                                                    <div class="card-header">
+                                                      <div class="trip-id">
+                                                            <span>ID :</span>
+                                                            <span class="status-content">TR025-KG</span>
+                                                      </div>
+                                                      <div class="status">
+                                                          <span>Status :</span>
+                                                          <span class="status-content">Active</span>
+                                                      </div>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="trip">
+                                                            <div class="trip-avatar fa fa-bus"></div>
+                                                        </div>
+                                                      <div class="infos">
+                                                            <div>
+                                                                <span class="prop" >Origin : </span><span class="value" >Kigali</span>
+                                                            </div>
+                                                            <div>
+                                                                <span class="prop">Destination : </span> <span class="value" >Kampala</span>
+                                                            </div>
+                                                            <div>
+                                                                <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                            </div>
+                                                            <div>
+                                                                <span class="prop"> Fare : </span><span class="value" >10 000</span>
+                                                            </div>
+                                                            <div>
+                                                                <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                            </div>
+                                                      </div>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="card-footer">
+                                                      <button data-modal-target="#modal" class="details">View Details</button>
+                                                      <button class="cancel">Cancel</button>
+                                                  
+                                                    </div>
+                                                </div>
+                                                <!--Card 2-->
+                                                <div class="card">
+                                                        <div class="card-header">
+                                                          <div class="trip-id">
+                                                                <span>ID :</span>
+                                                                <span class="status-content">TR025-KG</span>
+                                                          </div>
+                                                          <div class="status">
+                                                              <span>Status :</span>
+                                                              <span class="status-content">Active</span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="trip">
+                                                                <div class="trip-avatar fa fa-bus"></div>
+                                                            </div>
+                                                          <div class="infos">
+                                                                <div>
+                                                                    <span class="prop" >Origin : </span><span class="value" >Kigali</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="prop">Destination : </span> <span class="value" >Kampala</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                                </div>
+                                                                <div>
+                                                                    <span class="prop"> Fare : </span><span class="value" >10 000</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                                </div>
+                                                          </div>
+                                                        </div>
+                                                        
+                                                        
+                                                        <div class="card-footer">
+                                                          <button data-modal-target="#modal" class="details">View Details</button>
+                                                          <button class="cancel">Cancel</button>
+                                                      
+                                                        </div>
+                                                </div>
+                                                                            <!--Card 2-->
+                                    <div class="card">
+                                            <div class="card-header">
+                                              <div class="trip-id">
+                                                    <span>ID :</span>
+                                                    <span class="status-content">TR025-KG</span>
+                                              </div>
+                                              <div class="status">
+                                                  <span>Status :</span>
+                                                  <span class="status-content">Active</span>
+                                              </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="trip">
+                                                    <div class="trip-avatar fa fa-bus"></div>
+                                                </div>
+                                              <div class="infos">
+                                                    <div>
+                                                        <span class="prop" >Origin : </span><span class="value" >Kigali</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop">Destination : </span> <span class="value" >Kampala</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Fare : </span><span class="value" >10 000</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                    </div>
+                                              </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="card-footer">
+                                              <button data-modal-target="#modal" class="details">View Details</button>
+                                              <button class="cancel">Cancel</button>
+                                          
+                                            </div>
+                                        </div>
+                                        <!--Card 2-->
+                                        <div class="card">
+                                                <div class="card-header">
+                                                  <div class="trip-id">
+                                                        <span>ID :</span>
+                                                        <span class="status-content">TR025-KG</span>
+                                                  </div>
+                                                  <div class="status">
+                                                      <span>Status :</span>
+                                                      <span class="status-content">Active</span>
+                                                  </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="trip">
+                                                        <div class="trip-avatar fa fa-bus"></div>
+                                                    </div>
+                                                  <div class="infos">
+                                                        <div>
+                                                            <span class="prop" >Origin : </span><span class="value" >Kigali</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="prop">Destination : </span> <span class="value" >Kampala</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                        </div>
+                                                        <div>
+                                                            <span class="prop"> Fare : </span><span class="value" >10 000</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                        </div>
+                                                  </div>
+                                                </div>
+                                                
+                                                
+                                                <div class="card-footer">
+                                                  <button data-modal-target="#modal" class="details">View Details</button>
+                                                  <button class="cancel">Cancel</button>
+                                              
+                                                </div>
+                                            </div>
+                                            <!--Card 2-->
+                                            <div class="card">
+                                                    <div class="card-header">
+                                                      <div class="trip-id">
+                                                            <span>ID :</span>
+                                                            <span class="status-content">TR025-KG</span>
+                                                      </div>
+                                                      <div class="status">
+                                                          <span>Status :</span>
+                                                          <span class="status-content">Active</span>
+                                                      </div>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="trip">
+                                                            <div class="trip-avatar fa fa-bus"></div>
+                                                        </div>
+                                                      <div class="infos">
+                                                            <div>
+                                                                <span class="prop" >Origin : </span><span class="value" >Kigali</span>
+                                                            </div>
+                                                            <div>
+                                                                <span class="prop">Destination : </span> <span class="value" >Kampala</span>
+                                                            </div>
+                                                            <div>
+                                                                <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                            </div>
+                                                            <div>
+                                                                <span class="prop"> Fare : </span><span class="value" >10 000</span>
+                                                            </div>
+                                                            <div>
+                                                                <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                            </div>
+                                                      </div>
+                                                    </div>
+                                                    
+                                                    <div class="card-footer">
+                                                      <button data-modal-target="#modal" class="details">View Details</button>
+                                                      <button  class="cancel">Cancel</button>
+                                                  
+                                                    </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                        <!-- Popup Modal-->
+                        <div id="modal" class="modal">
+                                <div class="modal-header">
+                                    <div class="tittle">Trip Datails</div>
+                                    <button data-close-button class="close-button">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                            <div>
+                                                <span class="prop" >Id : </span><span class="value" >001</span>
+                                            </div>
+                                            <div>
+                                                <span class="prop" >Origin : </span><span class="value" >Kigali</span>
+                                            </div>
+                                            <div>
+                                                <span class="prop">Destination : </span> <span class="value" >Kampala</span>
+                                            </div>
+                                            <div>
+                                                <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                            </div>
+                                            <div>
+                                                <span class="prop"> Fare : </span><span class="value" >10 000</span>
+                                            </div>
+                                            <div>
+                                                <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                            </div>
+                                            <div>
+                                                <span class="prop"> Seating Capacity : </span><span class="value" >52</span>
+                                            </div>
+                                            <div>
+                                                <span class="prop"> Status : </span><span class="value" >Active</span>
+                                            </div>
+                                            
+                                </div>
+
+                            </div>
+                        
+
+                        <div id="overlay" ></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+            <div class="contact">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble"  target="_blank" ></i></a> 
+                            <a href="#"><i class="fa fa-twitter"  target="_blank" ></i></a> 
+                            <a href="#"><i class="fa fa-linkedin"  target="_blank" ></i></a> 
+                            <a href="#"><i class="fa fa-facebook"  target="_blank" ></i></a> 
+                                    
+                        </li>
+                    </ul>
+                </div> 
+                <div class="copy_right">
+                        <p>
+                                © 2019 WayFarer. All right reserved. Designed by <span>Nicolas Kasolene</span>
+                            </p>
+                </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
