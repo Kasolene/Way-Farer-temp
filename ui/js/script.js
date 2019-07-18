@@ -13,7 +13,7 @@ const loginValidation = () => {
     
     }
 
-// TRIP MODAL POPUP
+// MODAL POPUP
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
@@ -50,6 +50,9 @@ function closeModal(modal) {
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
+
+
+
 // DISPLAY ADD NEW TRIP
 const showText = () =>{
     const tripBtn = document.getElementById('panel');
@@ -60,4 +63,8 @@ const showText = () =>{
 
 document.querySelector("div#trip")
 .addEventListener('click',showText);
+// BACK AND ADD NEW TRIP BUTTON
 
+const changeButton = () =>{
+  document.getElementById('trip').name ="Back";
+}
