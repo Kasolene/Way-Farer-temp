@@ -23,7 +23,10 @@ const closesidemenu = () =>{
     document.getElementById('mainpagecontent').style.marginLeft ='0px';
 }
 
+<<<<<<< HEAD
 //----------------------
+=======
+>>>>>>> b9527bdb353e307839f5d5ae7f019ba1651c4401
 // MODAL POPUP
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')

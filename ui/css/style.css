@@ -17,6 +17,10 @@ header{
     display: flex;
     position: relative;
     justify-content: center;
+<<<<<<< HEAD
+=======
+
+>>>>>>> b9527bdb353e307839f5d5ae7f019ba1651c4401
     box-shadow: 0 4px 6px hsla(0, 0%, 0%, .2);
     
 }
@@ -650,7 +654,11 @@ header .status-header-login .switch {
     border-radius: 10px;
     z-index: 10;
     background-color: #fff;
+<<<<<<< HEAD
     min-width:400px;
+=======
+    width:600px;
+>>>>>>> b9527bdb353e307839f5d5ae7f019ba1651c4401
     max-width: 80%;
 }
 .modal.active{
