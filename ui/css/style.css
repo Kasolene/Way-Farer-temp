@@ -17,7 +17,8 @@ header{
     display: flex;
     position: relative;
     justify-content: center;
-    border-bottom: 1px solid #111;
+
+    box-shadow: 0 4px 6px hsla(0, 0%, 0%, .2);
     
 }
 
@@ -431,9 +432,11 @@ background-color: #111;
   }
   .card-header .trip-id{
     font-weight: bold;
+    font-size: 14px;
   }
   .card-header .status{
     font-weight: bold;
+    
   }
   .card-header .status .status-content{
     color:green;
@@ -586,26 +589,26 @@ background-color: #111;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms  ease-in-out;
-    border: 1px solid black;
     border-radius: 10px;
     z-index: 10;
     background-color: #fff;
-    width:500px;
+    width:600px;
     max-width: 80%;
 }
 .modal.active{
     transform: translate(-50%, -50%) scale(1);
 }
 .modal-header{
-    padding: 10px 15px;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #111;
+    border-bottom: 0.1px solid rgb(114, 114, 114 );
 }
 .modal-header .tittle{
-        font-size: 18px;
+        font-size: 1.4em;
         font-weight: bold;
+        color: dodgerblue;
 }
 .modal-header .close-button{
     cursor: pointer;
@@ -635,3 +638,23 @@ background-color: #111;
     pointer-events: all;
 
 }
+.modal-body div {
+    margin:20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+.modal-body div button {
+    cursor: pointer;
+    font-size:.9em;
+    font-family: inherit;
+    width: 150px;
+    height: 35px;
+    padding:2px 0;
+    margin-left:15px;
+    border-radius: 5px;
+    border:0 solid transparent;
+    color:white;
+    /* background: #1ca3ec; */
+    background:dodgerblue;
+}
+
