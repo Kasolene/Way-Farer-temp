@@ -55,9 +55,10 @@
             </div>
                 
             <div class="panel-body">
-                <!--Card 2-->
+                
             <div class="cards">
-                <div class="card">
+                        <!--booking-card 1-->
+                        <div class="card">
                             <div class="card-header">
                             <div class="trip-id">
                                     <span>ID :</span>
@@ -92,11 +93,11 @@
                             </div>
                             
                             <div class="card-footer">
-                                <button class="delbooking">Delete Booking</button>
+                            <button data-modal-target="#confirm-delete" class="delbooking">Delete Booking</button>
                         
                             </div>
                         </div>
-                        <!--Card 2-->
+                        <!--booking-Card 2-->
                         <div class="card">
                                 <div class="card-header">
                                 <div class="trip-id">
@@ -132,12 +133,12 @@
                                 </div>
 
                                 <div class="card-footer">
-                                <button class="delbooking">Delete Booking</button>
+                                <button data-modal-target="#confirm-delete" class="delbooking">Delete Booking</button>
                             
                                 </div>
-                            </div>
-                            <!--Card 2-->
-                            <div class="card">
+                        </div>
+                        <!--booking-Card 3-->
+                        <div class="card">
                                     <div class="card-header">
                                     <div class="trip-id">
                                             <span>ID :</span>
@@ -173,12 +174,12 @@
                                     
                                     
                                     <div class="card-footer">
-                                    <button class="delbooking">Delete Booking</button>
+                                    <button data-modal-target="#confirm-delete" class="delbooking">Delete Booking</button>
                                 
                                     </div>
-                            </div>
-                            <!--Card 2-->
-                <div class="card">
+                        </div>
+                        <!--booking-Card 4-->
+                        <div class="card">
                         <div class="card-header">
                         <div class="trip-id">
                                 <span>ID :</span>
@@ -214,12 +215,12 @@
                         
                         
                         <div class="card-footer">
-                        <button class="delbooking">Delete Booking</button>
+                        <button data-modal-target="#confirm-delete" class="delbooking">Delete Booking</button>
                     
                         </div>
-                    </div>
-                    <!--Card 2-->
-                    <div class="card">
+                        </div>
+                        <!--booking-Card 5-->
+                        <div class="card">
                             <div class="card-header">
                             <div class="trip-id">
                                     <span>ID :</span>
@@ -255,11 +256,11 @@
                             
                             
                             <div class="card-footer">
-                            <button class="delbooking">Delete Booking</button>
+                            <button data-modal-target="#confirm-delete" class="delbooking">Delete Booking</button>
                         
                             </div>
                         </div>
-                        <!--Card 2-->
+                        <!--booking-Card 6-->
                         <div class="card">
                                 <div class="card-header">
                                 <div class="trip-id">
@@ -296,14 +297,29 @@
                                 
                                 
                                 <div class="card-footer">
-                                 <button class="delbooking">Delete Booking</button>
-                            
+                                 <button  data-modal-target="#confirm-delete" class="delbooking">Delete Booking</button>
+                                
                                 </div>
                         </div>
 
                         
                     </div>
                 </div>
+                     <!-- Delete Confirm Modal -->
+                     <div id="confirm-delete" class="modal">
+                            <div class="modal-header">
+                                <div class="tittle">Trip booked </div>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                        <h3>Booking Deleted successfully</h3>
+                                        <div>
+                                                <button data-close-button class="confirm">OK</button>   
+                                        </div>    
+                            </div>
+
+                    </div>
+            <div id="overlay" ></div>
 
                 </div>
             </div>

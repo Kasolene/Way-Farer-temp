@@ -10,34 +10,35 @@
   
 </head>
 <body>
-    <header>
-        <div class="logged-header-brand" style="background-color:#fff;">
-            <a href="index.html" class="brand">WayFarer</a>
-        </div>
-        <div class="status-header-login">
-                <div class="switch">
-                         <div class="user-avatar fa fa-user" ></div>
-                         <!--<div class="dropdown">
-                            <div id="myDropdown" class="dropdown-content show">
-                                <a href="" id="user">Profile</a>
-                                <a href="" id="settings">Settings</a>
-                                <a href="" id="logout">Logout</a>
+        <header>
+                <div class="status-header-login">
+                    <a href="./trip.html" class="brand" >WayFarer</a>
+                    <a class="navbar" onclick="opensidemenu()">
+                            <i class="fa fa-bars fa-2x" ></i>
+                    </a>
+                        <div class="switch">
+                                 <div class="user-avatar fa fa-user" ></div>
+                                 <!--<div class="dropdown">
+                                    <div id="myDropdown" class="dropdown-content show">
+                                        <a href="" id="user">Profile</a>
+                                        <a href="" id="settings">Settings</a>
+                                        <a href="" id="logout">Logout</a>
+                                    </div>
+                                    
+                                </div>-->
                             </div>
-                            
-                        </div>-->
-                    </div>
-        </div>
-    </header>
-    <div class="container">
-        <div class="aside-nav">
-            <ul>
-                <li><a  href="./trip.html">Trip</a></li>
-                <li><a class="active" href="./booking.html">Booking</a></li>
-                <li><a href="./">Setting</a></li>
-                <li><a href="./sign_in.html">Logout</a></li>
-            </ul> 
-        </div>
-        <div class="section">
+                </div>
+            </header>
+            <div class="container">
+                <div class="sidemenu" id="sidebarleftmenu">
+                        <a class="brand" href="./trip.html"  >WayFarer</a>
+                        <a class="crossbtn" onclick="closesidemenu()">&times;</a>
+                        <a  href="./trip.html">Trip</a>
+                        <a class="active" href="./booking.html">Booking</a>
+                        <a href="./sign_in.html">Logout</a>
+                    </ul> 
+                </div>
+                <div id="mainpagecontent" class="section">
             <div class="section-container">
                 <div class="section-header">
                     <div class="section-tittle"><h1>Booking</h1></div>
@@ -53,259 +54,206 @@
                                 </div>
                                     
                                 <div class="panel-body" >
-                                    <!--Card 2-->
-                                    <div class="card">
-                                                <div class="card-header">
-                                                  <div class="trip-id">
+                                    <!--booking card 1-->
+                                    <div class="booking-card">
+                                                <div class="booking-card-header">
+                                                  <div class="booking-id">
                                                         <span>ID :</span>
-                                                        <span class="status-content">TR025-KG</span>
-                                                  </div>
-                                                  <div class="status">
-                                                      <span>Status :</span>
-                                                      <span class="status-content">Active</span>
+                                                        <span class="status-content">BOO025-KG</span>
                                                   </div>
                                                 </div>
-                                                <div class="card-body">
-                                                    <div class="trip">
-                                                        <div class="trip-avatar fa fa-bus"></div>
-                                                    </div>
+                                                <div class="booking-card-body">
                                                   <div class="infos">
                                                         <div>
-                                                            <span class="prop" >Origin : </span><span class="value" >Kigali</span>
+                                                            <span class="prop" >Name: </span><span class="value" >Niyibizi Jean de Dieu</span>
                                                         </div>
                                                         <div>
-                                                            <span class="prop">Destination : </span> <span class="value" >Kampala</span>
+                                                            <span class="prop">Trip Id : </span> <span class="value" >TRI023-KG</span>
+                                                        </div>
+                                                        <div>
+                                                                <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
                                                         </div>
                                                         <div>
                                                             <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
                                                         </div>
                                                         <div>
-                                                            <span class="prop"> Fare : </span><span class="value" >10 000</span>
+                                                            <span class="prop"> Route: </span><span class="value" >Kigali - Kampala</span>
                                                         </div>
                                                         <div>
-                                                            <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                            <span class="prop"> Seating Number: </span><span class="value" ></span>
                                                         </div>
+                                                       
                                                   </div>
                                                 </div>
-                                                
-                                                
-                                                <div class="card-footer">
-                                                  <button data-modal-target="#modal" class="details">View Details</button>
-                                                  <button class="cancel">Cancel</button>
-                                              
-                                                </div>
-                                            </div>
-                                            <!--Card 2-->
-                                            <div class="card">
-                                                    <div class="card-header">
-                                                      <div class="trip-id">
-                                                            <span>ID :</span>
-                                                            <span class="status-content">TR025-KG</span>
-                                                      </div>
-                                                      <div class="status">
-                                                          <span>Status :</span>
-                                                          <span class="status-content">Active</span>
-                                                      </div>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="trip">
-                                                            <div class="trip-avatar fa fa-bus"></div>
-                                                        </div>
-                                                      <div class="infos">
-                                                            <div>
-                                                                <span class="prop" >Origin : </span><span class="value" >Kigali</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="prop">Destination : </span> <span class="value" >Kampala</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
-                                                            </div>
-                                                            <div>
-                                                                <span class="prop"> Fare : </span><span class="value" >10 000</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
-                                                            </div>
-                                                      </div>
-                                                    </div>
-                                                    
-                                                    
-                                                    <div class="card-footer">
-                                                      <button data-modal-target="#modal" class="details">View Details</button>
-                                                      <button class="cancel">Cancel</button>
-                                                  
-                                                    </div>
-                                                </div>
-                                                <!--Card 2-->
-                                                <div class="card">
-                                                        <div class="card-header">
-                                                          <div class="trip-id">
-                                                                <span>ID :</span>
-                                                                <span class="status-content">TR025-KG</span>
-                                                          </div>
-                                                          <div class="status">
-                                                              <span>Status :</span>
-                                                              <span class="status-content">Active</span>
-                                                          </div>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <div class="trip">
-                                                                <div class="trip-avatar fa fa-bus"></div>
-                                                            </div>
-                                                          <div class="infos">
-                                                                <div>
-                                                                    <span class="prop" >Origin : </span><span class="value" >Kigali</span>
-                                                                </div>
-                                                                <div>
-                                                                    <span class="prop">Destination : </span> <span class="value" >Kampala</span>
-                                                                </div>
-                                                                <div>
-                                                                    <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
-                                                                </div>
-                                                                <div>
-                                                                    <span class="prop"> Fare : </span><span class="value" >10 000</span>
-                                                                </div>
-                                                                <div>
-                                                                    <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
-                                                                </div>
-                                                          </div>
-                                                        </div>
-                                                        
-                                                        
-                                                        <div class="card-footer">
-                                                          <button data-modal-target="#modal" class="details">View Details</button>
-                                                          <button class="cancel">Cancel</button>
-                                                      
-                                                        </div>
-                                                </div>
-                                                                            <!--Card 2-->
-                                    <div class="card">
-                                            <div class="card-header">
-                                              <div class="trip-id">
+                                    
+                                    </div>
+                                    <!--booking card 2-->
+                                    <div class="booking-card">
+                                            <div class="booking-card-header">
+                                              <div class="booking-id">
                                                     <span>ID :</span>
-                                                    <span class="status-content">TR025-KG</span>
-                                              </div>
-                                              <div class="status">
-                                                  <span>Status :</span>
-                                                  <span class="status-content">Active</span>
+                                                    <span class="status-content">BOO025-KG</span>
                                               </div>
                                             </div>
-                                            <div class="card-body">
-                                                <div class="trip">
-                                                    <div class="trip-avatar fa fa-bus"></div>
-                                                </div>
+                                            <div class="booking-card-body">
                                               <div class="infos">
                                                     <div>
-                                                        <span class="prop" >Origin : </span><span class="value" >Kigali</span>
+                                                        <span class="prop" >Name: </span><span class="value" >Niyibizi Jean de Dieu</span>
                                                     </div>
                                                     <div>
-                                                        <span class="prop">Destination : </span> <span class="value" >Kampala</span>
+                                                        <span class="prop">Trip Id : </span> <span class="value" >TRI023-KG</span>
+                                                    </div>
+                                                    <div>
+                                                            <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
                                                     </div>
                                                     <div>
                                                         <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
                                                     </div>
                                                     <div>
-                                                        <span class="prop"> Fare : </span><span class="value" >10 000</span>
+                                                        <span class="prop"> Route: </span><span class="value" >Kigali - Kampala</span>
                                                     </div>
                                                     <div>
-                                                        <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                        <span class="prop"> Seating Number: </span><span class="value" ></span>
                                                     </div>
+                                                   
                                               </div>
                                             </div>
-                                            
-                                            
-                                            <div class="card-footer">
-                                              <button data-modal-target="#modal" class="details">View Details</button>
-                                              <button class="cancel">Cancel</button>
-                                          
+                                
+                                    </div>
+                                    <!--booking card 3-->
+                                    <div class="booking-card">
+                                            <div class="booking-card-header">
+                                              <div class="booking-id">
+                                                    <span>ID :</span>
+                                                    <span class="status-content">BOO025-KG</span>
+                                              </div>
                                             </div>
-                                        </div>
-                                        <!--Card 2-->
-                                        <div class="card">
-                                                <div class="card-header">
-                                                  <div class="trip-id">
-                                                        <span>ID :</span>
-                                                        <span class="status-content">TR025-KG</span>
-                                                  </div>
-                                                  <div class="status">
-                                                      <span>Status :</span>
-                                                      <span class="status-content">Active</span>
-                                                  </div>
-                                                </div>
-                                                <div class="card-body">
-                                                    <div class="trip">
-                                                        <div class="trip-avatar fa fa-bus"></div>
+                                            <div class="booking-card-body">
+                                              <div class="infos">
+                                                    <div>
+                                                        <span class="prop" >Name: </span><span class="value" >Niyibizi Jean de Dieu</span>
                                                     </div>
-                                                  <div class="infos">
-                                                        <div>
-                                                            <span class="prop" >Origin : </span><span class="value" >Kigali</span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="prop">Destination : </span> <span class="value" >Kampala</span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
-                                                        </div>
-                                                        <div>
-                                                            <span class="prop"> Fare : </span><span class="value" >10 000</span>
-                                                        </div>
-                                                        <div>
+                                                    <div>
+                                                        <span class="prop">Trip Id : </span> <span class="value" >TRI023-KG</span>
+                                                    </div>
+                                                    <div>
                                                             <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
-                                                        </div>
-                                                  </div>
-                                                </div>
-                                                
-                                                
-                                                <div class="card-footer">
-                                                  <button data-modal-target="#modal" class="details">View Details</button>
-                                                  <button class="cancel">Cancel</button>
-                                              
-                                                </div>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Route: </span><span class="value" >Kigali - Kampala</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Seating Number: </span><span class="value" ></span>
+                                                    </div>
+                                                   
+                                              </div>
                                             </div>
-                                            <!--Card 2-->
-                                            <div class="card">
-                                                    <div class="card-header">
-                                                      <div class="trip-id">
-                                                            <span>ID :</span>
-                                                            <span class="status-content">TR025-KG</span>
-                                                      </div>
-                                                      <div class="status">
-                                                          <span>Status :</span>
-                                                          <span class="status-content">Active</span>
-                                                      </div>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="trip">
-                                                            <div class="trip-avatar fa fa-bus"></div>
-                                                        </div>
-                                                      <div class="infos">
-                                                            <div>
-                                                                <span class="prop" >Origin : </span><span class="value" >Kigali</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="prop">Destination : </span> <span class="value" >Kampala</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
-                                                            </div>
-                                                            <div>
-                                                                <span class="prop"> Fare : </span><span class="value" >10 000</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
-                                                            </div>
-                                                      </div>
-                                                    </div>
-                                                    
-                                                    <div class="card-footer">
-                                                      <button data-modal-target="#modal" class="details">View Details</button>
-                                                      <button  class="cancel">Cancel</button>
-                                                  
-                                                    </div>
+                                
+                                    </div>
+                                    <!--booking card 4-->
+                                    <div class="booking-card">
+                                            <div class="booking-card-header">
+                                              <div class="booking-id">
+                                                    <span>ID :</span>
+                                                    <span class="status-content">BOO025-KG</span>
+                                              </div>
                                             </div>
+                                            <div class="booking-card-body">
+                                              <div class="infos">
+                                                    <div>
+                                                        <span class="prop" >Name: </span><span class="value" >Niyibizi Jean de Dieu</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop">Trip Id : </span> <span class="value" >TRI023-KG</span>
+                                                    </div>
+                                                    <div>
+                                                            <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Route: </span><span class="value" >Kigali - Kampala</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Seating Number: </span><span class="value" ></span>
+                                                    </div>
+                                                   
+                                              </div>
+                                            </div>
+                                
+                                    </div>
+                                    <!--booking card 5-->
+                                    <div class="booking-card">
+                                            <div class="booking-card-header">
+                                              <div class="booking-id">
+                                                    <span>ID :</span>
+                                                    <span class="status-content">BOO025-KG</span>
+                                              </div>
+                                            </div>
+                                            <div class="booking-card-body">
+                                              <div class="infos">
+                                                    <div>
+                                                        <span class="prop" >Name: </span><span class="value" >Niyibizi Jean de Dieu</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop">Trip Id : </span> <span class="value" >TRI023-KG</span>
+                                                    </div>
+                                                    <div>
+                                                            <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Route: </span><span class="value" >Kigali - Kampala</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Seating Number: </span><span class="value" ></span>
+                                                    </div>
+                                                   
+                                              </div>
+                                            </div>
+                                
+                                    </div>
+                                    <!--booking card 6-->
+                                    <div class="booking-card">
+                                            <div class="booking-card-header">
+                                              <div class="booking-id">
+                                                    <span>ID :</span>
+                                                    <span class="status-content">BOO025-KG</span>
+                                              </div>
+                                            </div>
+                                            <div class="booking-card-body">
+                                              <div class="infos">
+                                                    <div>
+                                                        <span class="prop" >Name: </span><span class="value" >Niyibizi Jean de Dieu</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop">Trip Id : </span> <span class="value" >TRI023-KG</span>
+                                                    </div>
+                                                    <div>
+                                                            <span class="prop">Bus Licence #: </span><span class="value" >KG2015R2</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Date : </span><span class="value" >July 12, 2019 </span> 
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Route: </span><span class="value" >Kigali - Kampala</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="prop"> Seating Number: </span><span class="value" ></span>
+                                                    </div>
+                                                   
+                                              </div>
+                                            </div>
+                                
                                     </div>
                                 </div>
+                            </div>
 
                         <!-- Popup Modal-->
                         <div id="modal" class="modal">
