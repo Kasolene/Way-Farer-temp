@@ -11,10 +11,11 @@
 </head>
 <body>
     <header>
-        <div class="logged-header-brand" style="background-color:#fff;">
-            <a href="./index.html" class="brand" >WayFarer</a>
-        </div>
         <div class="status-header-login">
+            <a href="./trip.html" class="brand" >WayFarer</a>
+            <a class="navbar" onclick="opensidemenu()">
+                    <i class="fa fa-bars fa-2x" ></i>
+            </a>
                 <div class="switch">
                          <div class="user-avatar fa fa-user" ></div>
                          <!--<div class="dropdown">
@@ -29,15 +30,15 @@
         </div>
     </header>
     <div class="container">
-        <div class="aside-nav">
-            <ul>
-                <li><a class="active" href="./trip.html">Trip</a></li>
-                <li><a href="./booking.html">Booking</a></li>
-                <li><a href="./">Setting</a></li>
-                <li><a href="./sign_in.html">Logout</a></li>
+        <div class="sidemenu" id="sidebarleftmenu">
+                <a class="brand" href="./trip.html"  >WayFarer</a>
+                <a class="crossbtn" onclick="closesidemenu()">&times;</a>
+                <a class="active" href="./trip.html">Trip</a>
+                <a href="./booking.html">Booking</a>
+                <a href="./sign_in.html">Logout</a>
             </ul> 
         </div>
-        <div class="section">
+        <div id="mainpagecontent" class="section">
             <div class="section-container">
                 <div class="section-header">
                     <div class="section-tittle"><h1>Trip</h1></div>
@@ -46,60 +47,60 @@
                
                 <div class="section-body" >
 
-                     <!-- HIDE TRIP CARDS TO DISPLAY NEW TRIP ADDING FROM -->
-
+                <!-- HIDE TRIP CARDS TO DISPLAY NEW TRIP ADDING FROM -->
+                
                 <form  id="newTrip" class="addtrip-form" style="display:none">
-                        <div class="addtrip-panel-heading">
-                            Add Trip
-                        </div>
-                    <div class="addtrip-panel-body">	
-						<div class="form-group">
-								<label class="control-label" >Origin</label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" id="origin" name="origin" value=""  />
-								</div>
-						</div>
-							
-						<div class="form-group">
-								<label class="control-label" >Destination</label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" id="destination" name="destination" value=""  />
-								</div>
-						</div>
+                    <div class="addtrip-panel-heading">
+                        Add Trip
+                    </div>
+                <div class="addtrip-panel-body">	
+                    <div class="form-group">
+                            <label class="control-label" >Origin</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="origin" name="origin" value=""  />
+                            </div>
+                    </div>
                         
-                        <div class="form-group">
-								<label class="control-label" >Date</label>
-								<div class="col-sm-10">
-									<input type="date" class="form-control" id="date" name="date" value=""  />
-								</div>
-						</div>
+                    <div class="form-group">
+                            <label class="control-label" >Destination</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="destination" name="destination" value=""  />
+                            </div>
+                    </div>
+                    
+                    <div class="form-group">
+                            <label class="control-label" >Date</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="date" name="date" value=""  />
+                            </div>
+                    </div>
+                    
+                    <div class="form-group">
+                            <label class="control-label" >Bus Licence Number</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="buslic#" name="buslic#" value=""  />
+                            </div>
+                    </div>
+                    
+                    <div class="form-group">
+                            <label class="control-label" >Seating Capacity</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="seatplace" name="seatplace" value=""  />
+                            </div>
+                    </div>
                         
-                        <div class="form-group">
-								<label class="control-label" >Bus Licence Number</label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" id="buslic#" name="buslic#" value=""  />
-								</div>
-                        </div>
-                        
-                        <div class="form-group">
-								<label class="control-label" >Seating Capacity</label>
-								<div class="col-sm-10">
-									<input type="number" class="form-control" id="seatplace" name="seatplace" value=""  />
-								</div>
-						</div>
-							
-						<div class="form-group">
-								<label class="control-label" >Fare</label>
-								<div class="col-sm-10">
-									<input type="number" class="form-control" id="fare" name="fare" value=""  />
-								</div>
-								
-                        </div>
-                        <button type="submit" name="save" class="addtrip-btn">Save </button>
+                    <div class="form-group">
+                            <label class="control-label" >Fare</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="fare" name="fare" value=""  />
+                            </div>
+                            
+                    </div>
+                    <button type="submit" name="save" class="addtrip-btn">Save </button>
 
-                     </div>
-				</form>
-							
+                 </div>
+            </form>
+                    
 
                 <!-- END OF ADDIGN FORM-->
                     
@@ -125,10 +126,9 @@
                                             </select>
                                         </div>
                                         
-                                </div>
-                                    
+                                </div> 
                                 <div class="panel-body" >
-                                    <!--Card 2-->
+                                    <!--Trip Card 1-->
                                     <div class="card">
                                                 <div class="card-header">
                                                   <div class="trip-id">
@@ -166,12 +166,12 @@
                                                 
                                                 <div class="card-footer">
                                                   <button data-modal-target="#modal" class="details">View Details</button>
-                                                  <button class="cancel">Cancel</button>
+                                                  <button data-modal-target="#confirm-cancel" class="cancel">Cancel</button>
                                               
                                                 </div>
-                                            </div>
-                                            <!--Card 2-->
-                                            <div class="card">
+                                    </div>
+                                    <!--Trip Card 2-->
+                                    <div class="card">
                                                     <div class="card-header">
                                                       <div class="trip-id">
                                                             <span>ID :</span>
@@ -208,12 +208,12 @@
                                                     
                                                     <div class="card-footer">
                                                       <button data-modal-target="#modal" class="details">View Details</button>
-                                                      <button class="cancel">Cancel</button>
+                                                      <button data-modal-target="#confirm-cancel" class="cancel">Cancel</button>
                                                   
                                                     </div>
-                                                </div>
-                                                <!--Card 2-->
-                                                <div class="card">
+                                    </div>
+                                    <!--Trip Card 3-->
+                                    <div class="card">
                                                         <div class="card-header">
                                                           <div class="trip-id">
                                                                 <span>ID :</span>
@@ -250,11 +250,11 @@
                                                         
                                                         <div class="card-footer">
                                                           <button data-modal-target="#modal" class="details">View Details</button>
-                                                          <button class="cancel">Cancel</button>
+                                                          <button data-modal-target="#confirm-cancel" class="cancel">Cancel</button>
                                                       
                                                         </div>
-                                                </div>
-                                                                            <!--Card 2-->
+                                    </div>
+                                    <!--Trip Card 4-->
                                     <div class="card">
                                             <div class="card-header">
                                               <div class="trip-id">
@@ -292,12 +292,12 @@
                                             
                                             <div class="card-footer">
                                               <button data-modal-target="#modal" class="details">View Details</button>
-                                              <button class="cancel">Cancel</button>
+                                              <button data-modal-target="#confirm-cancel" class="cancel">Cancel</button>
                                           
                                             </div>
-                                        </div>
-                                        <!--Card 2-->
-                                        <div class="card">
+                                    </div>
+                                    <!--Trip Card 5-->
+                                    <div class="card">
                                                 <div class="card-header">
                                                   <div class="trip-id">
                                                         <span>ID :</span>
@@ -334,12 +334,12 @@
                                                 
                                                 <div class="card-footer">
                                                   <button data-modal-target="#modal" class="details">View Details</button>
-                                                  <button class="cancel">Cancel</button>
+                                                  <button data-modal-target="#confirm-cancel" class="cancel">Cancel</button>
                                               
                                                 </div>
-                                            </div>
-                                            <!--Card 2-->
-                                            <div class="card">
+                                    </div>
+                                    <!--Trip Card 6-->
+                                    <div class="card">
                                                     <div class="card-header">
                                                       <div class="trip-id">
                                                             <span>ID :</span>
@@ -375,10 +375,9 @@
                                                     
                                                     <div class="card-footer">
                                                       <button data-modal-target="#modal" class="details">View Details</button>
-                                                      <button  class="cancel">Cancel</button>
+                                                      <button data-modal-target="#confirm-cancel" class="cancel">Cancel</button>
                                                   
                                                     </div>
-                                            </div>
                                     </div>
                                 </div>
 
@@ -416,13 +415,39 @@
                                             
                                 </div>
 
+                        </div>
+                        <!-- Cancel Trip Modal -->
+                        <div id="confirm-cancel" class="modal">
+                            <div class="modal-header">
+                                <div class="tittle">Trip booked </div>
+                                <button data-close-button class="close-button">&times;</button>
                             </div>
-                        
+                            <div class="modal-body">
+                                        <h3>Trip Canceled successfully</h3>
+                                        <div>
+                                                <button data-close-button class="confirm">OK</button>   
+                                        </div>    
+                            </div>
+
+                        </div>
+                        <!-- Cancel Trip Modal -->
+                        <div id="create-trip" class="modal">
+                                <div class="modal-header">
+                                    <div class="tittle">New Trip </div>
+                                    <button data-close-button class="close-button">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                            <h3>Trip created successfully</h3>
+                                            <div>
+                                                    <button data-close-button class="confirm">OK</button>   
+                                            </div>    
+                                </div>
+    
+                        </div>
 
                         <div id="overlay" ></div>
 
                     </div>
-
                 </div>
             </div>
         </div>
