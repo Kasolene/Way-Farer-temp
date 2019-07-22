@@ -11,8 +11,19 @@ const loginValidation = () => {
         document.getElementById("requerement").innerHTML ="Invalid Email"
     }
     
-    }
+}
 
+// ADMIN ASIDE MENU 
+const opensidemenu = () =>{
+    document.getElementById('sidebarleftmenu').style.width ='267px';
+    document.getElementById('mainpagecontent').style.marginLeft ='267px';
+}
+const closesidemenu = () =>{
+    document.getElementById('sidebarleftmenu').style.width ='0';
+    document.getElementById('mainpagecontent').style.marginLeft ='0px';
+}
+
+//----------------------
 // MODAL POPUP
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')

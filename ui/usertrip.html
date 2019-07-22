@@ -383,11 +383,25 @@
                                                 </select>  
                                         </div>
                                         <div>
-                                                <button class="confirm">Confirm Booking</button>   
+                                                <button data-close-button="#confirm-booking" class="close-button">Confirm Booking</button> 
                                         </div>    
                             </div>
 
                     </div>
+                            <!-- Booking Popup Modal -->
+                            <div id="confirm-booking" class="modal">
+                                    <div class="modal-header">
+                                        <div class="tittle">Trip booked </div>
+                                        <button data-close-button class="close-button">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                                <h3>Trip booked successfully</h3>
+                                                <div>
+                                                        <button class="confirm">OK</button>   
+                                                </div>    
+                                    </div>
+        
+                            </div>
                     <div id="overlay" ></div>
             </div>
         </div>
