@@ -295,12 +295,15 @@ header .status-header-login .switch {
 .sidemenu{
     height: 100%;
     background: #111;
-    width: 0px;
+    width: 267px;
+    
     position: fixed ;
     top: 0;
-    left: 0;
     overflow-x: hidden;
     transition: all 0.50s;
+}
+#mainpagecontent{
+    margin-left: 267px;
 }
 .sidemenu a{
    text-decoration: none;
